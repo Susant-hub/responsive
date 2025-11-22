@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="designch.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="./photos/icon-hamburger.svg"
+        onclick="toogleMenu()"
+        class="menubar"
+      />
+      <h2>room</h2>
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">shop</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture class="hero-img">
+          <source
+            media="(min-width:500px)"
+            srcset="./photos/desktop-image-hero-1.jpg"
+          />
+          <img src="./photos/mobile-image-hero-1.jpg" alt="hero-img" />
+          <div class="buttons">
+            <img src="./photos/icon-angle-left.svg" />
+            <img src="./photos/icon-angle-right.svg" />
+          </div>
+        </picture>
+
+        <div class="hero-txt">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            we provide unmatched quality, comfort, and style for property owners
+            across the country. our experts combine form and function in
+            bringing your vision to life. create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <a href="#">SHOP NOW <img src="./photos/icon-arrow.svg" /></a>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="dark-picture">
+          <img src="./photos/image-about-dark.jpg" />
+        </div>
+        <div class="about-txt">
+          <h2>ABOUT OUR FURNITURE</h2>
+          <p>
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <div class="light-picture">
+          <img src="./photos/image-about-light.jpg" />
+        </div>
+      </section>
+    </main>
+
+    <script src="designch.js"></script>
+  </body>
+</html>

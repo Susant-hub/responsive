@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  color: hsl(0, 100%, 100%);
+  font-family: "League Spartan";
+  z-index: 999;
+}
+
+header .menubar {
+  cursor: pointer;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+ul a {
+  text-decoration: none;
+  color: hsl(0, 100%, 100%);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto;
+}
+
+.hero-img {
+  grid-column: 1;
+  max-height: 70vh;
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img .buttons {
+  display: flex;
+  gap: 4rem;
+  background-color: hsl(0, 0%, 0%);
+  padding: 2rem 2.7rem;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: -11.1rem;
+}
+
+.hero-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 3.5rem 6rem 3.5rem;
+  max-height: 70vh;
+  position: relative;
+  font-family: "League Spartan";
+}
+
+.hero-txt h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 0%);
+}
+
+.hero-txt p {
+  color: hsl(0, 0%, 63%);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-txt a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(0, 0%, 0%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: auto;
+}
+
+.dark-picture img,
+.light-picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.dark-picture {
+  grid-column: 1;
+}
+
+.about-txt {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  gap: 1rem;
+  font-family: "League Spartan";
+}
+
+.about-txt h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 0%);
+  word-spacing: 1rem;
+}
+
+.about-txt p {
+  color: hsl(0, 0%, 63%);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.light-picture {
+  grid-column: 3;
+}
+
+@media (max-width: 1300px) {
+  .hero-img .buttons {
+    padding: 1rem 1.75rem;
+    right: -9.2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .about {
+    grid-template-columns: 1fr 1.25fr 1fr;
+  }
+  .hero-img .buttons {
+    padding: 1rem 1.5rem;
+    right: -8.75rem;
+  }
+  .hero-txt {
+    padding: 4rem 2rem 6rem 2rem;
+  }
+  .about-txt {
+    padding: 2rem;
+  }
+  .hero-txt h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 2rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-img .buttons {
+    bottom: 0;
+    right: 0;
+    gap: 3rem;
+  }
+  .hero-txt a {
+    align-self: center;
+    font-size: 0.9rem;
+  }
+  .dark-picture,
+  .light-picture {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  header .menubar {
+    display: block;
+  }
+  header h2,
+  header nav {
+    display: none;
+  }
+  .showmenu {
+    gap: 0;
+    display: block;
+  }
+  .showheader {
+    background-color: hsl(0, 0%, 63%);
+  }
+  .hero-img .buttons {
+    gap: 2rem;
+    padding: 0.8rem;
+  }
+  .hero-txt h1 {
+    font-size: 1.5rem;
+  }
+  .hero-txt p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .about-txt p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
